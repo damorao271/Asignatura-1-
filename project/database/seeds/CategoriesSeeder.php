@@ -2,8 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use \app\Category;
-
+use \App\Category;
 
 class CategoriesSeeder extends Seeder
 {
@@ -14,12 +13,12 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        DB::create([
-            "title" => "T-Shirt"
-        ]);
+        // factory(Category::class, 2)->create([
+        // "title" => "Bebelin"
+        // ]);
 
-        DB::table("categories")->insert([
-            "title" => "Hoodies",
+        DB::table('categories')->insert([
+            "title" => "Hoodies"
         ]);
     }
 }

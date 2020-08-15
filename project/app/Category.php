@@ -3,19 +3,18 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use \app\Product;
+use \App\Product;
 
 class Category extends Model
 {
     protected $table = "categories";
-
     protected $fillable = [
         'title'
     ];
 
 
-    public function products()
+    public function profession()
     {
-        return $this->hasMany(Product::class);
+        return $this->belongsTo(Product::class);
     }
 }

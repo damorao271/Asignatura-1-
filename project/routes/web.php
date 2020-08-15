@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +17,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('categories', 'CategoriesController@index');
+Route::get('categories/{id}', 'CategoriesController@showById')->where("id", "[0-9]+");
+Route::get("/products", "ProductController@index");
